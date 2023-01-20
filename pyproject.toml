@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-"GitHUb" = "https://github.com/jesusllorens79/v2ctrydan"
+"GitHub" = "https://github.com/jesusllorens79/v2ctrydan"
 "Bug Tracker" = "https://github.com/jesusllorens79/v2ctrydan"
