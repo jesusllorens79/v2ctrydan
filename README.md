@@ -1,5 +1,4 @@
-# Example Package
+# V2C Trydan Package:
 
-This is a simple example package. You can use
-[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+This is a package for connect the Trydan chager with ModbusTCP. You can find it here:
+[Github-flavored Markdown](https://pypi.org/project/v2ctrydan/)
