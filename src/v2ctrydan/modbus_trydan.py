@@ -46,14 +46,14 @@ class Charger:
     def _read_register(self, command: str):
         """Read the registers of the Trydan Charger."""
         data = float(0.0)
-        value = self.client.read_holding_registers(command, 2, unit=1)
+        value = self.client.read_holding_registers(command, 2, slave=1)
         data = self.regenera_float(value)
         return data
 
     # To do!: Implement try/except
     def _write_register(self, command: str, data_to_write: int):
         """Write new registers to the Trydan Charger."""
-        value_write = self.client.write_register(command, value=data_to_write, unit=1)
+        value_write = self.client.write_register(command, value=data_to_write, slave=1)
         output_flag = "Success" if value_write else "Failure"
         return print("Writing single coil status: " + output_flag)
 
