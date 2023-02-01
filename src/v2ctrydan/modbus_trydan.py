@@ -57,6 +57,12 @@ class Charger:
         output_flag = "Success" if value_write else "Failure"
         return print("Writing single coil status: " + output_flag)
 
+
+    def check(self):
+        
+        return True
+
+
     ### WRITE HOLDING REGISTER 0X006:
 
     def postPauseState(self):
@@ -229,38 +235,40 @@ class Charger:
         payment_state = self._read_register(command)
         return payment_state
 
-    def getOCPP(self, ocpp_state):
+    def getOCPP(self):
         """Returns the charger's OCPP state."""
         command = 0x0BD0
         ocpp_state = self._read_register(command)
         print(ocpp_state)
 
+
     def getMinIntensity(self):
         """Returns the charger's Minimum Intensity state."""
         command = 0x0BD1
         min_intensity = self._read_register(command)
-        print(min_intensity)
+        return min_intensity
 
     def getMaxIntensity(self):
         """Returns the charger's Maximum Intensity state."""
         command = 0x0BD2
         max_intensity = self._read_register(command)
-        print(max_intensity)
+        return max_intensity
 
     def getPauseDynamic(self):
         """Returns the charger's Pause Dynamic state."""
         command = 0x0BD3
         pause_dynamic = self._read_register(command)
-        print(pause_dynamic)
+        return pause_dynamic
 
     def getDynamicPowerMode(self):
         """Returns the charger's Dynamic Power mode."""
         command = 0x0BD4
         dynamic_power = self._read_register(command)
-        print(dynamic_power)
+        return dynamic_power
 
     def getContractedPower(self):
         """Returns the charger's Contracted Power state."""
         command = 0x0BD5
         contracted_power = self._read_register(command)
-        print(contracted_power)
+        return contracted_power
+ 
