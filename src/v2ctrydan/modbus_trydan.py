@@ -239,7 +239,7 @@ class Charger:
         """Returns the charger's OCPP state."""
         command = 0x0BD0
         ocpp_state = self._read_register(command)
-        print(ocpp_state)
+        return ocpp_state
 
 
     def getMinIntensity(self):
