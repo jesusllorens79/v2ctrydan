@@ -65,87 +65,87 @@ class Charger:
 
     ### WRITE HOLDING REGISTER 0X006:
 
-    def postPauseState(self):
+    def postPauseState(self, data_to_write):
         """Post the charger's pause state."""
         command = 0x0177A
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_pause_state = self._write_register(command, data_to_write)
         return post_pause_state
 
-    def postLock(self):
+    def postLock(self, data_to_write):
         """Post the charger's lock state."""
         command = 0x0177B
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_lock = self._write_register(command, data_to_write)
         return post_lock
 
-    def postPromgram(self):
+    def postPromgram(self, data_to_write):
         """Post the charger's promgram state."""
         command = 0x0177C
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_promgram = self._write_register(command, data_to_write)
         return post_promgram
 
-    def postIntensity(self):
+    def postIntensity(self, data_to_write):
         """Post the charger's intensity."""
         command = 0x0177D
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_intensity = self._write_register(command, data_to_write)
         return post_intensity
 
-    def postDynamic(self):
+    def postDynamic(self, data_to_write):
         """Post the charger's dynamic state."""
         command = 0x0177E
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_dynamic = self._write_register(command, data_to_write)
         return post_dynamic
 
-    def postPayment(self):
+    def postPayment(self, data_to_write):
         """Post the charger's payment state."""
         command = 0x0177F
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_payment = self._write_register(command, data_to_write)
         return post_payment
 
-    def postOcpp(self):
+    def postOcpp(self, data_to_write):
         """Post the charger's OCPP state."""
         command = 0x01780
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_ocpp = self._write_register(command, data_to_write)
         return post_ocpp
 
-    def postMinIntensity(self):
+    def postMinIntensity(self, data_to_write):
         """Post the charger's Minimum Intensity."""
         command = 0x01781
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_min_intensity = self._write_register(command, data_to_write)
         return post_min_intensity
 
-    def postMaxIntensity(self):
+    def postMaxIntensity(self, data_to_write):
         """Post the charger's Maximum intensity."""
         command = 0x01782
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_max_intensity = self._write_register(command, data_to_write)
         return post_max_intensity
 
-    def postPauseDynamic(self):
+    def postPauseDynamic(self, data_to_write):
         """Post the charger's pause dynamic state."""
         command = 0x01783
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_pause_dynamic = self._write_register(command, data_to_write)
         return post_pause_dynamic
 
-    def postDynamicPowerMode(self):
+    def postDynamicPowerMode(self, data_to_write):
         """Post the charger's Dynamic power mode."""
         command = 0x01784
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_dynamic_power = self._write_register(command, data_to_write)
         return post_dynamic_power
 
-    def postContractedPower(self):
+    def postContractedPower(self, data_to_write):
         """Post the charger's Contracted power state."""
         command = 0x01785
-        data_to_write = int(input("Write the asnwer:"))
+        #data_to_write = int(input("Write the asnwer:"))
         post_contracted_power = self._write_register(command, data_to_write)
         return post_contracted_power
 
