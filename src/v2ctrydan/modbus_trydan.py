@@ -272,3 +272,20 @@ class Charger:
         contracted_power = self._read_register(command)
         return contracted_power
  
+    def _read_all_at_once(self, starting_address, count):
+        """Read the input registers starting from the specified address."""
+        response = self.client.read_holding_registers(starting_address, count, slave=1)
+        # Convert the response to a list of values
+        values = response.registers
+        # Convert the values to floats
+        floats = []
+        for i in range(0, len(values), 2):
+            float_value = unpack('>f', bytes.fromhex(f'{values[i]:04x}{values[i+1]:04x}'))[0]
+            floats.append(float_value)
+        return floats
+    
+    def getAll(self):
+        starting_address=3010
+        count=40
+        get_all = self._read_all_at_once(starting_address, count)
+        return get_all
